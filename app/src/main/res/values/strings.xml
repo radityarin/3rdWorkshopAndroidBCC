@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">WorkshopRecycler</string>
+    <string name="dummy_name">Tony Stark</string>
+    <string name="dummy_content">I\'m the one who died in Avengers Endgame</string>
+
+    <string-array name="data_name">
+        <item>Elon Musk</item>
+        <item>Jeff Bezos</item>
+        <item>Bill Gates</item>
+        <item>Jack Ma</item>
+        <item>Mark Zuckerberg</item>
+        <item>Sundar Pichai</item>
+        <item>Enzo Ferrari</item>
+        <item>Nadiem Makarim</item>
+        <item>Jack Dorsey</item>
+        <item>Steve Jobs</item>
+    </string-array>
+
+    <string-array name="data_content">
+        <item>I\'m the one who owns a Tesla, SpaceX, OpenAI</item>
+        <item>I\'m the one who owns Amazon, Blue Origin and many more</item>
+        <item>I\'m the founder and CEO Microsoft</item>
+        <item>I\'m the founder Alibaba</item>
+        <item>I\'m the one who owns Facebook</item>
+        <item>I\'m the one who owns Google</item>
+        <item>I\'m the founder of Ferrari</item>
+        <item>I\'m the one who owns Gojek</item>
+        <item>I\'m the CEO of Twitter</item>
+        <item>I\'m the founder of Apple</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>https://pbs.twimg.com/profile_images/1223183340171415552/XQcxk5Zb_400x400.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg/800px-Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bill_Gates_June_2015.png/800px-Bill_Gates_June_2015.png</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Enabling_eCommerce-_Small_Enterprises%2C_Global_Players_%2839008130265%29_%28cropped%29.jpg/220px-Enabling_eCommerce-_Small_Enterprises%2C_Global_Players_%2839008130265%29_%28cropped%29.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Mark_Zuckerberg_F8_2018_Keynote_%28cropped_2%29.jpg/220px-Mark_Zuckerberg_F8_2018_Keynote_%28cropped_2%29.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sundar_Pichai_WEF_2020.png/220px-Sundar_Pichai_WEF_2020.png</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Enzo_Ferrari_Monza_1967.jpg/220px-Enzo_Ferrari_Monza_1967.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Nadiem_Makarim.jpg/220px-Nadiem_Makarim.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/4/43/Jack_Dorsey_2014.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/8/82/Steve_Jobs_with_red_shawl_edit.jpg</item>
+    </string-array>
+
+</resources>
