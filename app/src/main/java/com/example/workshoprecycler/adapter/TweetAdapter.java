@@ -39,14 +39,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Tweet tweet = list_tweets.get(position);
-        holder.bind(tweet);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onTweetClickCallback.onTweetClicked(tweet);
-            }
-        });
+        holder.onBind(position);
     }
 
     @Override
@@ -54,7 +47,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
         return list_tweets.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         private CircleImageView civ_item_photo;
         private TextView tv_username, tv_content;
@@ -66,13 +59,20 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
             tv_content = itemView.findViewById(R.id.tv_item_content);
         }
 
-        void bind(Tweet tweet) {
+        void onBind(int position) {
+            final Tweet tweet = list_tweets.get(position);
             Glide.with(itemView.getContext())
                     .load(tweet.getPhoto())
                     .apply(new RequestOptions().override(55, 55))
                     .into(civ_item_photo);
             tv_username.setText(tweet.getUsername());
             tv_content.setText(tweet.getContent());
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onTweetClickCallback.onTweetClicked(tweet);
+                }
+            });
         }
     }
 
