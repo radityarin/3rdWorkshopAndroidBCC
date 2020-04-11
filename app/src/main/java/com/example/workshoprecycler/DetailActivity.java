@@ -11,7 +11,7 @@ import com.example.workshoprecycler.model.Tweet;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static com.example.workshoprecycler.MainActivity.TWEET_EXTRA;
+import static com.example.workshoprecycler.fragments.TweetFragment.TWEET_EXTRA;
 
 public class DetailActivity extends AppCompatActivity {
 

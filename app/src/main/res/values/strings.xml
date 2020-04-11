@@ -2,6 +2,8 @@
     <string name="app_name">WorkshopRecycler</string>
     <string name="dummy_name">Tony Stark</string>
     <string name="dummy_content">I\'m the one who died in Avengers Endgame</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
 
     <string-array name="data_name">
         <item>Elon Musk</item>
@@ -41,5 +43,9 @@
         <item>https://upload.wikimedia.org/wikipedia/commons/4/43/Jack_Dorsey_2014.jpg</item>
         <item>https://upload.wikimedia.org/wikipedia/commons/8/82/Steve_Jobs_with_red_shawl_edit.jpg</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_profile_fragment">Ini adalah Fragment Profile</string>
 
 </resources>

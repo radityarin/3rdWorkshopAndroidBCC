@@ -1,60 +1,38 @@
 package com.example.workshoprecycler;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.workshoprecycler.adapter.TweetAdapter;
-import com.example.workshoprecycler.model.Tweet;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.ArrayList;
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity implements TweetAdapter.OnTweetClickCallback {
-
-    private RecyclerView rv_tweets;
-    public static final String TWEET_EXTRA = "tweet";
+    private BottomNavigationView navigationView;
+    private NavController navController;
+    private AppBarConfiguration appBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rv_tweets = findViewById(R.id.rv_tweets);
+        // Membuat Bottom Navigation dengan cara kekinian dengan menaggunakan Navigation Component
 
-        showTweets();
-    }
+        navigationView = findViewById(R.id.nav_view);
 
-    private void showTweets() {
-        rv_tweets.setLayoutManager(new LinearLayoutManager(this));
-        TweetAdapter tweetAdapter = new TweetAdapter(getDummyTweets());
-        rv_tweets.setAdapter(tweetAdapter);
-        tweetAdapter.setOnTweetClickCallback(this);
-    }
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
-    private ArrayList<Tweet> getDummyTweets(){
-        String[] dataName = getResources().getStringArray(R.array.data_name);
-        String[] dataContent = getResources().getStringArray(R.array.data_content);
-        String[] dataPhoto = getResources().getStringArray(R.array.data_photo);
+        appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_profile
+        ).build();
 
-        ArrayList<Tweet> tweets = new ArrayList<>();
-        for (int i = 0; i < dataName.length; i++) {
-            Tweet tweet = new Tweet();
-            tweet.setUsername(dataName[i]);
-            tweet.setContent(dataContent[i]);
-            tweet.setPhoto(dataPhoto[i]);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
 
-            tweets.add(tweet);
-        }
-        return tweets;
-    }
-
-    @Override
-    public void onTweetClicked(Tweet tweet) {
-        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-        intent.putExtra(TWEET_EXTRA,tweet);
-        startActivity(intent);
     }
 }
